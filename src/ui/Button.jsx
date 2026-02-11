@@ -1,18 +1,5 @@
 import styled, { css } from "styled-components";
 
-const Button = styled.button`
-  cursor: pointer;
-  font-size: 1.4rem;
-  padding: 1.2rem 1.6rem;
-  /* margin: 2rem; */
-  border: none;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
-
-  ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variation]}
-`;
-
 const sizes = {
   small: css`
     font-size: 1.2rem;
@@ -60,6 +47,15 @@ const variations = {
     }
   `,
 };
+
+const Button = styled.button`
+  border: none;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+
+  ${(props) => sizes[props.size]}
+  ${(props) => variations[props.variation]}
+`;
 
 Button.defaultProps = {
   variation: "primary",
